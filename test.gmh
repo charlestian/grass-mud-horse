@@ -1,0 +1,16 @@
+²İ²İ²İÄàÂí	Put a 1 on the stack
+Âí²İ²İ²İÄà²İ²İ²İ²İÄàÄàÂí	Set a Label at this point
+²İÂí²İ	Duplicate the top stack item
+ÄàÂí²İÄà	Output the current value
+²İ²İ²İÄà²İÄà²İÂí	Put 10 (newline) on the stack...
+ÄàÂí²İ²İ	...and output the newline
+²İ²İ²İÄàÂí	Put a 1 on the stack
+Äà²İ²İ²İ	Addition. This increments our current value.
+²İÂí²İ	Duplicate that value so we can test it
+²İ²İ²İÄà²İÄàÄàÂí	Push 11 onto the stack
+Äà²İ²İÄà	Subtraction. So if we've reached the end, we have a zero on the stack.
+ÂíÄà²İ²İÄà²İ²İ²İÄà²İÄàÂí	If we have a zero, jump to the end
+Âí²İÂí²İÄà²İ²İ²İ²İÄàÄàÂí	Jump to the start
+Âí²İ²İ²İÄà²İ ²İ²İÄà²İÄàÂí	Set the end label
+²İÂíÂí 	Discard our accumulator, to be tidy
+ºÓĞ·	Just as it says.

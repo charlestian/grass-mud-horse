@@ -8,9 +8,9 @@ public enum OpCode {
     // Heap Access
     H_PUT(false), H_GET(false),
     // Flow Control
-    F_MARK(true), F_CALL(true), F_JMP(true), F_JZ(true), F_JNEG(true), F_RET(true), F_END(false),
+    F_MARK(true), F_CALL(true), F_JMP(true), F_JZ(true), F_JNEG(true), F_RET(false), F_END(false),
     // I/O
-    I_INT(true), I_CHR(true), O_INT(true), O_CHR(true),
+    I_INT(false), I_CHR(false), O_INT(false), O_CHR(false),
     // EOF
     X_EOF(false);
     public final boolean needArg;

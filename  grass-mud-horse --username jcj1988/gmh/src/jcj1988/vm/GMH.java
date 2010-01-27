@@ -33,7 +33,7 @@ public class GMH implements Executable {
 	Analyzable alz = null;
 	Manager mng = null;
 
-	public GMH(String xml, String src,Mode mode) {
+	public GMH(String xml, String src, Mode mode) {
 		io = new StdIO();
 		switch (mode) {
 		case RUN:
@@ -65,7 +65,8 @@ public class GMH implements Executable {
 	}
 
 	public static void main(String[] args) {
-		new GMH("config.xml",
-				args[0],Mode.RUN).execute();
+		if (args.length > 0)
+			new GMH("config.xml", args[0], Mode.RUN).execute();
+		else System.out.println("请加命令行参数，gmh文本文件名，如：\nGMH hworld.gmh\n");
 	}
 }

@@ -3,7 +3,7 @@ package jcj1988.oprate;
 /**
  * 无参数运算类（operator which Need Not Argument）
  * */
-public class OperatorNArg implements Operator {
+public class OperatorNArg implements Callable {
 	Operatable op = null;
 	String name=null;
 
@@ -13,7 +13,7 @@ public class OperatorNArg implements Operator {
 	}
 
 	@Override
-	public void execute() {
+	public void call() {
 		op.execute();
 	}
 	

@@ -12,7 +12,7 @@ import jcj1988.manage.RunMng;
  * */
 public class Flow {
 	RunMng mng = null;
-	private ArrayList<Operator> opr = null;
+	private ArrayList<Callable> opr = null;
 	java.util.Stack<Integer> callStack = new java.util.Stack<Integer>();
 	Stack opStack = null;
 	private Hashtable<BigInteger, Integer> labels = new Hashtable<BigInteger, Integer>();

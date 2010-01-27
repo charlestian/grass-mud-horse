@@ -20,7 +20,7 @@ import jcj1988.manage.Manager;
 import jcj1988.manage.RunMng;
 import jcj1988.oprate.Executable;
 import jcj1988.oprate.Operatable;
-import jcj1988.oprate.Operator;
+import jcj1988.oprate.Callable;
 
 public class GMH implements Executable {
 	public IOable io = null;

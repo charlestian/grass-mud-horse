@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 
 import jcj1988.oprate.Operatable;
-import jcj1988.oprate.Operator;
+import jcj1988.oprate.Callable;
 import jcj1988.oprate.OperatorArg;
 import jcj1988.oprate.OperatorNArg;
 
@@ -13,7 +13,7 @@ import jcj1988.oprate.OperatorNArg;
  * 
  * */
 public class RunMng extends Manager {
-	private ArrayList<Operator> opr = new ArrayList<Operator>();
+	private ArrayList<Callable> opr = new ArrayList<Callable>();
 	private int i = 0;
 
 	@Override
@@ -34,7 +34,7 @@ public class RunMng extends Manager {
 	@Override
 	public void execute() {
 		for (i = 0; i < opr.size(); i++) {
-			opr.get(i).execute();
+			opr.get(i).call();
 		}
 	}
 
@@ -46,7 +46,7 @@ public class RunMng extends Manager {
 		this.i = i;
 	}
 
-	public ArrayList<Operator> getOpr() {
+	public ArrayList<Callable> getOpr() {
 		return opr;
 	}
 }

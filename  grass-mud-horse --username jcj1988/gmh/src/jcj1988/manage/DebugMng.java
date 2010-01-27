@@ -5,13 +5,13 @@ import java.util.ArrayList;
 
 import jcj1988.io.IOable;
 import jcj1988.oprate.Operatable;
-import jcj1988.oprate.Operator;
+import jcj1988.oprate.Callable;
 import jcj1988.oprate.OperatorArg;
 import jcj1988.oprate.OperatorNArg;
 
 public class DebugMng extends Manager {
 	private IOable io = null;
-	private ArrayList<Operator> opr = new ArrayList<Operator>();
+	private ArrayList<Callable> opr = new ArrayList<Callable>();
 	private int i = 0;
 
 	public DebugMng(IOable io) {
@@ -38,13 +38,13 @@ public class DebugMng extends Manager {
 
 	@Override
 	public void execute() {
-		Operator o=null;
+		Callable o=null;
 		io.println("\n\n以下为运行过程：\n");
 		for (i = 0; i < opr.size(); i++) {
 			o=opr.get(i);
 			io.print(o.getName()+" ");
 			if(o.getName().equals("F_END"))break;
-			o.execute();
+			o.call();
 			io.print("\n");
 		}
 	}
@@ -57,7 +57,7 @@ public class DebugMng extends Manager {
 		this.i = i;
 	}
 
-	public ArrayList<Operator> getOpr() {
+	public ArrayList<Callable> getOpr() {
 		return opr;
 	}
 }

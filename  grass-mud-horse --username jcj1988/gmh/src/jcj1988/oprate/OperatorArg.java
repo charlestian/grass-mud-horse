@@ -5,7 +5,7 @@ import java.math.BigInteger;
 /**
  * º¬²Î²Ù×÷Àà£¨Operator which have Argument£©
  * */
-public class OperatorArg implements Operator{
+public class OperatorArg implements Callable{
 	Operatable op = null;
 	BigInteger arg = null;
 	String name=null;
@@ -17,7 +17,7 @@ public class OperatorArg implements Operator{
 	}
 
 	@Override
-	public void execute() {
+	public void call() {
 		op.execute(arg);
 	}
 

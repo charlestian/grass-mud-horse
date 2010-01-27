@@ -1,5 +1,6 @@
 package jcj1988.oprate;
 
-public interface Operator extends Executable{
+public interface Callable{
+	public void call();
 	public String getName();
 }

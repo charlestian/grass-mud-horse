@@ -24,9 +24,7 @@ The code of grass-mud-horse language looks like following, this program loops fr
 #示例
 写出来大概就是这个样子，下面是一个从1到10的循环： 感谢(卡库尔 / Kakur)同学提供
 |草-草 草泥马|数字1压栈|Put a 1 on the stack|
-|----------|----------|----------|
 |马-草草 草泥草草草草泥泥马|在这里设置一个循环开始的标识|Set a Label at this point|
-|----------|----------|----------|
 |草-马草|复制栈顶元素	|Duplicate the top stack item|
 |----------|----------|----------|
 |泥马-草泥|输出当前值|Output the current value|
